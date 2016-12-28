@@ -1,5 +1,5 @@
-const URL = "http://localhost:2403/residentes";
-// var database = firebase.database();
+const URL = "https://parsemapper.firebaseio.com/.json";
+var database = "https://parsemapper.firebaseio.com/.json";
 
 jQuery(document).ready(function ($) {
   var $div = $('#floating-panel');
@@ -47,12 +47,15 @@ jQuery(document).ready(function ($) {
       var datos = {};
       datos = parseData(data[i]);
       datosToHTML(datos);
-      console.log(data[i]);
     }
   }
 
-  function cargarMensaje(mensaje) {
-    alert(mensaje);
+  function cargarMensaje(alert) {
+    alert(alert);
+  }
+
+  function cargarLog(log) {
+    console.log(log);
   }
 
   function datosToHTML(datos) {
@@ -74,8 +77,6 @@ jQuery(document).ready(function ($) {
     .catch(function errorHandler(error) {
       console.log(error);
     });
-
-  console.log("exit");
 
 });
 
